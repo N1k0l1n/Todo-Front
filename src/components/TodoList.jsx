@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { Tabs, Layout, Row, Col, Input, message } from "antd";
+import "./TodoList.css";
 import TodoTab from "./TodoTab";
 import TodoForm from "./TodoForm";
 import {
@@ -37,6 +38,7 @@ const TodoList = () => {
   const refresh = () => {
     loadTodos()
       .then((json) => {
+        console.log(json, "----------");
         setTodos(json);
         setActiveTodos(json.filter((todo) => todo.completed === false));
         setCompletedTodos(json.filter((todo) => todo.completed === true));
@@ -64,7 +66,7 @@ const TodoList = () => {
         <div className="todolist">
           <Row>
             <Col span={14} offset={5}>
-              <h1> Something Todos></h1>
+              <h1> Something Todo</h1>
               <TodoForm onFormSubmit={handleFormSubmit} />
               <br />
               <Tabs defaultActiveKey="all">

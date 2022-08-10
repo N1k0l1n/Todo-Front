@@ -31,7 +31,7 @@ const Todo = ({ todo, onTodoRemoval, onTodoToggle }) => {
       key={todo.id}
     >
       <div className="todo-item">
-        <Tag color={todo.completed ? "cyan" : "red"} className="tdod-tag">
+        <Tag color={todo.completed ? "cyan" : "red"} className="todo-tag">
           {todo.tilte}
         </Tag>
       </div>

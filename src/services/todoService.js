@@ -1,11 +1,11 @@
-const baseUrl = "${process.env.REACT_APP_API_URL}/todos";
+const baseUrl = "http://localhost:8081/todos";
 
 export const loadTodos = () => {
   return fetch(baseUrl).then((res) => res.json());
 };
 
 export const getTodo = (id) => {
-  return fetch(`${baseUrl}/${id}`).then((res) => res.json());
+  return fetch(`${baseUrl}/{id}`).then((res) => res.json());
 };
 
 export const createTodo = (todo) => {
@@ -36,7 +36,7 @@ export const updateTodo = (todo) => {
 };
 
 export const deleteTodo = (id) => {
-  return fetch(`${baseUrl}/{id}`, {
+  return fetch(`${baseUrl}/${id}`, {
     method: "DELETE",
   }).then((res) => res.json());
 };
