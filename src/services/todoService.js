@@ -22,7 +22,7 @@ export const createTodo = (todo) => {
 };
 
 export const updateTodo = (todo) => {
-  return fetch(`${baseUrl}/{todo.id}`, {
+  return fetch(`${baseUrl}/${todo.id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
