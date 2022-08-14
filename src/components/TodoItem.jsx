@@ -12,7 +12,7 @@ const Todo = ({ todo, onTodoRemoval, onTodoToggle }) => {
           <Switch
             checkedChildren={<CheckOutlined />}
             unCheckedChildren={<CloseOutlined />}
-            onChange={() => onTodoToggle(Todo)}
+            onChange={() => onTodoToggle(todo)}
             defaultChecked={todo.completed}
           />
         </Tooltip>,
@@ -32,7 +32,7 @@ const Todo = ({ todo, onTodoRemoval, onTodoToggle }) => {
     >
       <div className="todo-item">
         <Tag color={todo.completed ? "cyan" : "red"} className="todo-tag">
-          {todo.tilte}
+          {todo.title}
         </Tag>
       </div>
     </List.Item>

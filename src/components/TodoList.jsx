@@ -30,6 +30,7 @@ const TodoList = () => {
   };
 
   const handleToggleTodoStatus = (todo) => {
+    console.log("Update - ", todo);
     todo.completed = !todo.completed;
     updateTodo(todo).then(onRefresh());
     message.info("Todo Status updated!");
